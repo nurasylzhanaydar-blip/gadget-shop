@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volt — гаджет дүкені</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylegit.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#home">Volt</a>
+  <button class="burger" id="burger" aria-label="Мәзір" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#home">Басты бет</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#profile">Профиль</a>
+    <a href="#cart">Себет <span id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main>
+  <!-- Басты бет -->
+  <section class="page" id="home">
+    <div class="hero">
+      <div>
+        <h1>Жаңа гаджеттер қолыңызға жақын</h1>
+        <p class="lead">Смартфон, ноутбук, құлаққап және аксессуарлар. Қазақстан бойынша жеткізу, 12 айға кепілдік.</p>
+        <a class="btn" href="#catalog">Каталогты ашу</a>
+      </div>
+      <div class="stage" aria-hidden="true"><div class="device"><i></i></div></div>
+    </div>
+    <h2 class="gap">Танымал тауарлар</h2>
+    <div class="grid" id="featured"></div>
+    <div class="perks">
+      <div><strong>Жылдам жеткізу</strong><br>Алматыда 1 күнде, елде 3 күнге дейін.</div>
+      <div><strong>Ресми кепілдік</strong><br>Барлық тауарға 12 ай кепілдік беріледі.</div>
+      <div><strong>Ыңғайлы төлем</strong><br>Карта, Kaspi немесе алғанда төлеу.</div>
+    </div>
+  </section>
+
+  <!-- Каталог -->
+  <section class="page" id="catalog">
+    <h2>Каталог</h2>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Тауар атауын іздеу" aria-label="Іздеу">
+      <select id="category" aria-label="Санат"><option value="">Барлық санаттар</option></select>
+      <select id="sort" aria-label="Сұрыптау">
+        <option value="">Сұрыптаусыз</option>
+        <option value="asc">Бағасы: өсу бойынша</option>
+        <option value="desc">Бағасы: кему бойынша</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="muted" id="noResult" hidden>Ештеңе табылмады. Іздеу сөзін немесе санатты өзгертіп көріңіз.</p>
+  </section>
+
+  <!-- Себет -->
+  <section class="page" id="cart">
+    <h2>Себет</h2>
+    <p id="cartEmpty">Себет бос. <a class="link" href="#catalog">Каталогтан тауар таңдаңыз</a>.</p>
+    <div id="cartBox" hidden>
+      <div id="cartList"></div>
+      <div class="summary">
+        <span>Барлығы: <strong id="total">0 ₸</strong></span>
+        <button class="btn" id="checkout">Тапсырыс беру</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Профиль -->
+  <section class="page" id="profile">
+    <h2>Профиль</h2>
+    <form class="form" id="profileForm">
+      <label>Аты-жөні <input name="name" type="text" autocomplete="name"></label>
+      <label>Email <input name="email" type="email" autocomplete="email"></label>
+      <label>Телефон <input name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___ __ __"></label>
+      <label>Қала <input name="city" type="text" autocomplete="address-level2"></label>
+      <button class="btn" type="submit">Профильді сақтау</button>
+    </form>
+  </section>
+
+  <!-- Портфолио -->
+  <section class="page" id="portfolio">
+    <h2>Портфолио</h2>
+    <div class="grid">
+      <article class="card"><div class="thumb">🖥️</div><h3>Volt вебсайты</h3><p class="muted">Гаджет дүкенінің адаптивті сайты: каталог, себет, профиль.</p></article>
+      <article class="card"><div class="thumb">📲</div><h3>Мобильді нұсқа</h3><p class="muted">Телефонға арналған интерфейс және Figma прототипі.</p></article>
+      <article class="card"><div class="thumb">🎨</div><h3>Брендинг</h3><p class="muted">Логотип, түстер мен қаріптер жүйесі.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">© 2026 Volt. Барлық құқықтар қорғалған.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="scriptgit.js"></script>
+</body>
+</html>
